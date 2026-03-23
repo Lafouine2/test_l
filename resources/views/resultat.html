@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vos Résultats | OriCeft</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/result.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="shortcut icon" href="/img/logo.svg" type="image/svg+xml">
+</head>
+
+<body>
+
+ 
+    <header>
+        <div class="navbar">
+            <div class="mklogo">
+                <a href="/html/accueil.html" class="logo">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-graduation-cap h-7 w-7 text-primary-foreground">
+                        <path
+                            d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z">
+                        </path>
+                        <path d="M22 10v6"></path>
+                        <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"></path>
+                    </svg>
+                    OriCeft
+                </a>
+            </div>
+            <ul class="navlink">
+                <li><a href="./accueil.html">Accueil</a></li>
+                <li><a href="./filiere.html">Filières</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+                 <li><a href="./equipe.html">Equipes</a></li>
+                <li class="toContact"><a href="#">info</a></li>
+            </ul>
+            <div class="links">
+                <div class="trynow">
+                    <a href="index.html">commencer l'orientation</a>
+                </div>
+                <div class="hamburgerToogle">
+                    <div class="trait"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <div class="hero">
+        <div class="hero-tag">✦ Résultats personnalisés</div>
+        <h1 id="heroTitle">Votre profil d'orientation</h1>
+        <p id="heroSub">Voici les filières les plus adaptées à votre profil RIASEC unique.</p>
+    </div>
+
+    <!-- Profile section -->
+    <div class="profile-section">
+        <div class="riasec-grid">
+
+            <!-- RIASEC bars -->
+            <div class="riasec-visual-card">
+                <h2 class="section-heading">Votre profil RIASEC</h2>
+                <p class="section-sub">Scores normalisés sur 100 points</p>
+                <div class="riasec-bars" id="riasecBars"></div>
+            </div>
+
+            <!-- AI Commentary -->
+            <div class="ai-card" id="aiCard">
+                <div class="ai-label">Analyse IA</div>
+                <h3 class="ai-title">Interprétation de votre profil</h3>
+                <div class="ai-text" id="aiText">
+                    <div class="ai-skeleton">
+                        <div class="skeleton-line" style="width:95%"></div>
+                        <div class="skeleton-line" style="width:80%"></div>
+                        <div class="skeleton-line" style="width:90%"></div>
+                        <div class="skeleton-line" style="width:70%"></div>
+                        <div class="skeleton-line" style="width:85%"></div>
+                        <div class="skeleton-line" style="width:60%"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Results -->
+    <div class="results-section">
+        <div class="results-header">
+            <div>
+                <h2 class="section-heading">Filières recommandées</h2>
+                <p class="section-sub">Classées par compatibilité avec votre profil</p>
+            </div>
+            <div class="filter-tabs">
+                <button class="filter-btn active" onclick="filterBy('all', this)">Toutes</button>
+                <button class="filter-btn" onclick="filterBy('general', this)">Général</button>
+                <button class="filter-btn" onclick="filterBy('technique', this)">Technique</button>
+            </div>
+        </div>
+
+        <div class="filiere-grid" id="filiereGrid"></div>
+
+        <div class="bottom-actions">
+            <a href="quizz.html" class="btn-primary">↩ Refaire le test</a>
+            <button class="btn-secondary" onclick="window.print()">📄 Télécharger les résultats</button>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p><strong>Oriceft</strong> — Douala, Cameroun</p>
+        <p style="margin-top:8px">© 2026 Oriceft. Tous droits réservés.</p>
+    </footer>
+    <script src="../js/result.js"></script>
+</body>
+
+</html>
